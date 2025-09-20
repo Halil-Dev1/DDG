@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="nl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Giveaway Inschrijvingen</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main class="app">
+      <header class="app__header">
+        <h1>Giveaway deelnemerslijst</h1>
+        <p>
+          Vul je naam in om deel te nemen. Iedere naam kan maar één keer meedoen,
+          en je inschrijving blijft bewaard op dit apparaat.
+        </p>
+      </header>
+
+      <section class="card">
+        <form id="entry-form" novalidate>
+          <label class="field" for="name">
+            <span class="field__label">Naam</span>
+            <input
+              id="name"
+              name="name"
+              type="text"
+              placeholder="Bijv. Alex de Vries"
+              autocomplete="off"
+              required
+              maxlength="60"
+            />
+          </label>
+          <button type="submit" class="button">Inschrijven</button>
+        </form>
+        <p id="feedback" class="feedback" role="alert" aria-live="polite"></p>
+      </section>
+
+      <section class="card">
+        <div class="card__header">
+          <h2>Ingeschreven deelnemers</h2>
+          <span id="participant-count" class="badge">0</span>
+        </div>
+        <ul id="participant-list" class="participant-list"></ul>
+      </section>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
